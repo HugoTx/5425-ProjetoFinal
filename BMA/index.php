@@ -14,10 +14,6 @@ $_SESSION['erro'] = '';
     <title>BMA</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
-    <style>
-
-    </style>
-
 </head>
 
 <section class="vh-100" style="background-color: #31419b;">
@@ -27,28 +23,24 @@ $_SESSION['erro'] = '';
                 <div class="card" style="border-radius: 1rem;">
                     <div class="row g-0">
                         <div class="col-md-6 col-lg-5 d-none d-md-block">
-                            <img src="imagens/bma/bonequito2.jpg" alt="login form" class="img-fluid"
-                                style="border-radius: 1rem 0 0 1rem;" />
+                            <img src="imagens/bma/bonequito2.jpg" alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
                         </div>
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
                             <div class="card-body p-4 p-lg-5 text-black">
-                                <form method="POST" action="/BMA/APIescola.php?pedido=verificaFuncionario" class="user">
+                                <form method="POST" action="includes/APIescola.php?pedido=verificaFuncionario" class="user">
                                     <div class="d-flex align-items-center mb-3 pb-1">
                                         <span class="h1 fw-bold mb-0">Escola de Música</span>
                                     </div>
                                     <div class="form-outline mb-4">
-                                        <input type="text" id="text" class="form-control form-control-lg"
-                                            name="username" />
+                                        <input type="text" id="text" class="form-control form-control-lg" name="username" />
                                         <label class="form-label">Utilizador</label>
                                     </div>
                                     <div class="form-outline mb-4">
-                                        <input type="password" id="password" class="form-control form-control-lg"
-                                            name="password" />
+                                        <input type="password" id="password" class="form-control form-control-lg" name="password" />
                                         <label class="form-label">Password</label>
                                     </div>
                                     <div class="pt-1 mb-4">
-                                        <input type="submit" name="login" class="btn btn-dark btn-lg btn-block text"
-                                            value="Login" />
+                                        <input type="submit" name="login" class="btn btn-dark btn-lg btn-block text" value="Login" />
                                         <text class="text-center" id="erro"><?= $erro ?></text>
                                     </div>
                                 </form>
@@ -59,16 +51,19 @@ $_SESSION['erro'] = '';
             </div>
         </div>
     </div>
+    <?php
+    require('includes/footer.php');
+    ?>
 
 </section>
 <script src="jquery/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script>
-setTimeout(function() {
+    setTimeout(function() {
 
-    $("#erro").hide()
+        $("#erro").hide()
 
-}, 2000);
+    }, 2000);
 </script>
 
 </body>
